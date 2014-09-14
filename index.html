@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Collector</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+
+    <!-- Container -->
+    <div class="container">
+
+      <!-- Header Section -->
+      <div class="row header" id="header-section">
+
+        <!-- Title Section -->
+        <div class="col-md-5" id="title-section">
+          <h1 id="title">Collector</h1>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="col-md-7" id="controls-section">
+          <button type="button" class="btn btn-default controls-button" id="new-box-button">New Box</button>
+          <button type="button" class="btn btn-default controls-button" id="edit-box-button">Edit Box</button>
+          <button type="button" class="btn btn-default controls-button" id="save-button">Save Boxes</button>
+          <button type="button" class="btn btn-default controls-button" id="export-box-button">Export Box</button>
+
+          <!-- Create Box Form-->
+          <form class="form-inline" role="form" id="create-box-form">
+            <div class="form-group" id="create-box-name-form">
+              <label class="sr-only">Box Name</label>
+              <input type="text" class="form-control" id="create-box-name-input" placeholder="Box Name">
+            </div>
+            <button type="submit" class="btn btn-default" id="create-box-button">Create</button>
+          </form>
+
+
+        </div>
+        <!-- /Controls Section -->
+
+        
+
+      </div>
+      <!-- /Header Section -->
+
+      <!-- Content Section -->
+      <div class="row content" id="content-section">
+
+        <!-- Boxes Section -->
+        <div class="col-md-3" id="boxes-section">
+          <div class="content-section-header" id="boxes-section-header"> Boxes </div><hr>
+        </div>
+
+        <!-- Items Section-->
+        <div class="col-md-9" id="items-section">
+          <div class="content-section-header" id="items-section-header"> Items </div><hr>
+          <div class="display-section">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
