@@ -51,7 +51,7 @@ hr {
 	height: 100%;
 	width: 20%;
 	border-radius: 5px;
-	background-color: #E3E3E3;
+	border: 2px solid #E3E3E3;
 	margin: 10px;
 	padding: 10px;
 }
@@ -64,7 +64,7 @@ hr {
 	height: 100%;
 	width: 75%;
 	border-radius: 5px;
-	background-color: #E3E3E3;
+	border: 2px solid #E3E3E3;
 	margin: 10px;
 	padding: 10px;
 }
