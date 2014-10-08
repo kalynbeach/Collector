@@ -9,8 +9,8 @@
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -27,52 +27,79 @@
 
         <!-- Controls Section -->
         <div class="col-md-7" id="controls-section">
-          <button type="button" class="btn btn-default controls-button" id="new-box-button">New Box</button>
-          <button type="button" class="btn btn-default controls-button" id="edit-box-button">Edit Box</button>
-          <button type="button" class="btn btn-default controls-button" id="save-button">Save Boxes</button>
-          <button type="button" class="btn btn-default controls-button" id="export-box-button">Export Box</button>
-
-          <!-- Create Box Form-->
+    
+          <!-- Create Box Form -->
           <form class="form-inline" role="form" id="create-box-form">
             <div class="form-group" id="create-box-name-form">
               <label class="sr-only">Box Name</label>
-              <input type="text" class="form-control" id="create-box-name-input" placeholder="Box Name">
+              <input type="text" class="form-control" id="new-box-name-input" placeholder="New Box">
             </div>
-            <button type="submit" class="btn btn-default" id="create-box-button">Create</button>
+            <button type="button" class="btn btn-default" id="new-box-button">Create</button>
           </form>
 
 
         </div>
-        <!-- /Controls Section -->
+        <!-- end Controls Section -->
 
         
 
       </div>
-      <!-- /Header Section -->
+      <!-- end Header Section -->
 
       <!-- Content Section -->
       <div class="row content" id="content-section">
 
         <!-- Boxes Section -->
         <div class="col-md-3" id="boxes-section">
-          <div class="content-section-header" id="boxes-section-header"> Boxes </div><hr>
+          <div class="content-section-header" id="boxes-section-header">
+            <span> Boxes </span> 
+          </div><hr>
+          <div id="box-display-section">
+
+          </div>
         </div>
 
         <!-- Items Section-->
         <div class="col-md-9" id="items-section">
-          <div class="content-section-header" id="items-section-header"> Items </div><hr>
-          <div class="display-section">
+          <div class="content-section-header" id="items-section-header">
+           <span> Items </span>
+           <button type="button" class="btn btn-default" id="add-item-button"> Add Item </button>
+         </div><hr>
+          <div id="item-display-section">
 
           </div>
         </div>
       </div>
     </div>
-    <!-- /Container -->
+    <!-- end Container -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <!-- Scripts & Templates -->
+
+    <script id="item-template" type="text/template">
+      <button type="button" class="btn btn-default item-button" href= <%- link %>> 
+        <%- title %>
+      </button>
+    </script>
+
+    <script id="box-template" type="text/template">
+      <button type="button" class="btn btn-default item-button" id=<%- name %>>
+        <%- name %>
+      </button>
+
+    </script>
+    
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script src="js/lib/backbone-min.js"></script>
+    <script src="js/lib/backbone.localStorage-min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+
+    <script src="js/models/item.js"></script>
+    <script src="js/models/box.js"></script>
+    <script src="js/collections/box-collection.js"></script>
+    <script src="js/views/item-view.js"></script>
+    <script src="js/views/box-view.js"></script>
+    <script src="js/views/app-view.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

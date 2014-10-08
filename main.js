@@ -1,8 +1,16 @@
 /*
-**	Resourcer
+**	Collector
 ** 
 **	An app for consolidating and organzing links to webpages
 **
+**	TODO:
+**    - Box functionality:
+**      - Delete box
+**      - Export (send items via templated email)
+**    - Item functionality:
+**      - Add item
+**      - Delete item
+**      - Organize items (groupings, color-coding?)
 */
 
 // ==========================
@@ -166,6 +174,10 @@ $(document).ready(function() {
     $('.display-section').empty();
 
     var boxId = $(this).attr("value");
+    var boxName = $(this).text();
+
+    // Change items section header text to be the name of box
+    //$('#items-section-header').text(boxName);
 
     displayItems(boxes[boxId]);
 
